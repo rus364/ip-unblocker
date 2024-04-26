@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Unblock IP address</title>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                background: linear-gradient(to right, #bb4848, #50ad65);
+                font-family: Arial, sans-serif;
+            }
+            .centered {
+                text-align: center;
+                color: white;
+                padding: 20px;
+                border-radius: 5px;
+            }
+            input[type="text"] {
+                outline: none;
+                border-radius: 10px;
+            }
+            button {
+                outline: none;
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="centered">
+            <form method="POST">
+                <label for="ip_address">IP address to unblock:</label><br>
+                <input type="text" id="ip_address" name="ip_address" required><br>
+                <button type="submit">Unblock</button>
+            </form>
+            {% if output %}
+                <p>{{ output }}</p>
+            {% endif %}
+        </div>
+    </body>
+</html>
